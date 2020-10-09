@@ -1,0 +1,129 @@
+
+@media (max-width: 576px) {
+  .container-benefits {
+    width: 100% !important;
+    background-color: #b8a576;
+    height: 490px;
+
+    .benefits-col {
+      height: 490px;
+      overflow: hidden;
+      background-color: #b8a576;
+      color: #170800;
+
+      h5 {
+        line-height: 1.8rem !important;
+        color: #170800;
+        font-size: 1rem;
+      }
+
+      img.benefits-img {
+        width: 350px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .container-benefits {
+    width: 100% !important;
+    background-color: #b8a576;
+    height: 470px;
+
+    .benefits-col {
+      height: 470px;
+      overflow: hidden;
+      background-color: #b8a576;
+      color: #170800;
+
+      h5 {
+        line-height: 2rem !important;
+        color: #170800;
+        font-size: 1rem;
+      }
+
+      img.benefits-img {
+        width: 350px !important;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-benefits {
+    width: 100% !important;
+    background-color: #b8a576;
+    height: 470px;
+
+    .benefits-col {
+      height: 470px;
+      overflow: hidden;
+      background-color: #b8a576;
+      color: #170800;
+
+      h5 {
+        line-height: 2rem !important;
+        color: #170800;
+        font-size: 1rem;
+      }
+
+      img.benefits-img {
+        width: 350px !important;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  .container-benefits {
+    width: 100% !important;
+    background-color: #b8a576;
+    height: 470px;
+
+    .benefits-col {
+      height: 470px;
+      overflow: hidden;
+      background-color: #b8a576;
+      color: #170800;
+
+      h5 {
+        line-height: 2rem !important;
+        color: #170800;
+        font-size: 1rem;
+      }
+
+      img.benefits-img {
+        width: 350px !important;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .container-benefits {
+    width: 100% !important;
+    background-color: #b8a576;
+    height: 470px;
+
+    .benefits-col {
+      height: 470px;
+      overflow: hidden;
+      background-color: #b8a576;
+      color: #170800;
+
+      h5 {
+        line-height: 2rem !important;
+        color: #170800;
+      }
+
+      img.benefits-img {
+        width: 350px !important;
+      }
+    }
+
+  }
+
+}

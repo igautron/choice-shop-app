@@ -1,0 +1,24 @@
+
+.container {
+     h2 {
+       color: #170800;
+     }
+    .row {
+      .col {
+        p.contact-text {
+          color: #170800;
+          font-size: 1rem !important;
+
+          &:hover {
+            color: green;
+          }
+
+          i.fas.item-contact, i.fab.item-contact, i.far.item-contact {
+            color: #170800 !important;
+            font-size: 20px !important;
+
+          }
+        }
+      }
+    }
+  }

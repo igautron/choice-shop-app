@@ -1,0 +1,146 @@
+
+@media (max-width: 576px) {
+  section.container {
+    h2 {
+      color: #170800;
+    }
+    h5 {
+      line-height: 2rem !important;
+      font-size: 1rem;
+    }
+    p {
+      color: #170800;
+    }
+    .row {
+      .col {
+        h2 {
+          color: #170800;
+        }
+
+        h5 {
+          line-height: 2rem !important;
+          color: #170800;
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  section.container {
+    h2 {
+      color: #170800;
+    }
+    h5 {
+      line-height: 2rem !important;
+      font-size: 1rem;
+    }
+    p {
+      color: #170800;
+    }
+    .row {
+      .col {
+        h2 {
+          color: #170800;
+        }
+
+        h5 {
+          line-height: 2rem !important;
+          color: #170800;
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  section.container {
+    h2 {
+      color: #170800;
+    }
+    h5 {
+      line-height: 2rem !important;
+      font-size: 1rem;
+    }
+    p {
+      color: #170800;
+    }
+    .row {
+      .col {
+        h2 {
+          color: #170800;
+        }
+
+        h5 {
+          line-height: 2rem !important;
+          color: #170800;
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  section.container {
+    h2 {
+      color: #170800;
+    }
+    h5 {
+      line-height: 2rem !important;
+      font-size: 1rem;
+    }
+    p {
+      color: #170800;
+    }
+    .row {
+      .col {
+        h2 {
+          color: #170800;
+        }
+
+        h5 {
+          line-height: 2rem !important;
+          color: #170800;
+          font-size: 1rem !important;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  section.container {
+    h2 {
+      color: #170800;
+    }
+    h5 {
+      line-height: 2rem !important;
+    }
+    p {
+      color: #170800;
+    }
+    .row {
+      .col {
+        h2 {
+          color: #170800;
+        }
+
+        h5 {
+          line-height: 2rem !important;
+          color: #170800;
+          font-size: 1.25rem !important;
+        }
+      }
+    }
+  }
+
+
+}
+

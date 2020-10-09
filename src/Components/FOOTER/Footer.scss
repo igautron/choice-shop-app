@@ -1,0 +1,60 @@
+.container-footer {
+  width: 100% !important;
+  background-color: #170800;
+  min-height: 450px;
+
+  .row {
+    .col {
+      height: auto;
+      p.footer-slogan {
+        line-height: 2rem !important;
+      }
+    }
+    .col {
+      p {
+        a {
+          &:hover {
+            color: green !important;
+          }
+
+        }
+      }
+    }
+    .col {
+      p.footer-work {
+        line-height: 2rem !important;
+      }
+      p {
+        i.fas {
+          font-size: 15px;
+          color: green;
+        }
+      div {
+        div.md-form {
+          margin: 0px !important;
+          input {
+            width: 180px !important;
+            margin: 0px !important;
+            transform: translate(13px);
+          }
+         }
+        }
+      }
+    }
+    .col {
+      p.footer-adress {
+          line-height: 2rem !important;
+      }
+      p {
+        i.far, i.fas {
+          font-size: 15px;
+        }
+      }
+      p.footer-tell {
+        width: 240px;
+      }
+    }
+  }
+}
+
+
