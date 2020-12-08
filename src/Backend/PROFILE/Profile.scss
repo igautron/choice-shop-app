@@ -1,0 +1,385 @@
+
+div {
+  .row {
+    .col {
+      .container {
+        ul.nav {
+          li.nav-item {
+            color: #170800 !important;
+            a.nav-link {
+              width: 160px !important;
+              text-align: center;
+              border-radius: 0px !important;
+            }
+          }
+        }
+        .tab-content {
+
+          .tab-pane {
+
+            p {
+              .container {
+                div {
+                  div {
+                    div {
+                      div {
+                        .table {
+
+                          thead {
+
+                            tr {
+                              th {
+                                text-align: left !important;
+                                border-bottom: 0px;
+                              }
+                              td {
+                                text-align: left !important;
+                                border-bottom: 0px;
+                                border-top: 0px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div {
+                    div {
+                      input.form-control {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+          p {
+            form {
+              div {
+                .row {
+                  .col {
+                    form {
+                      input {
+                        width: 2.5rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  div {
+    .row {
+      .col {
+        .container {
+          ul.nav {
+            li.nav-item {
+              color: #170800 !important;
+              margin: 5px 5px 5px 5px !important;
+
+              a.nav-link {
+                width: 110px !important;
+                text-align: center;
+                border-radius: 0px !important;
+
+                font-size: 10px;
+              }
+            }
+          }
+
+          .tab-content {
+
+            .tab-pane {
+
+              p {
+                .container {
+                  div {
+                    div {
+                      div {
+                        div {
+                          .table {
+
+                            thead {
+
+                              tr {
+                                th {
+                                  text-align: left !important;
+                                  border-bottom: 0px;
+                                }
+
+                                td {
+                                  text-align: left !important;
+                                  border-bottom: 0px;
+                                  border-top: 0px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+
+
+                  }
+                }
+              }
+
+            }
+            .tab-pane {
+              p {
+                form {
+                  margin: 15px 0px 15px 0px;
+                  padding: 15px 0px 10px 0px !important;
+
+                  div {
+                    .row {
+                      padding: 1rem;
+
+                      .col {
+                        p {
+                          font-size: 0.8rem;
+                        }
+                      }
+
+                      .col {
+                        form {
+                          padding: 0px !important;
+                          margin: 0px;
+
+                          input {
+                            width: 2.5rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div {
+                    div {
+                      p.payment {
+                        padding: 15px !important;
+                      }
+                    }
+                  }
+                  div {
+                    padding: 15px;
+                    a {
+                      button.btn-profile {
+
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+  div {
+    .row {
+      .col {
+        .container {
+          ul.nav {
+            li.nav-item {
+              color: #170800 !important;
+              margin: 5px 5px 5px 5px !important;
+
+              a.nav-link {
+                width: 110px !important;
+                text-align: center;
+                border-radius: 0px !important;
+
+                font-size: 10px;
+              }
+            }
+          }
+
+          .tab-content {
+
+            .tab-pane {
+
+              p {
+                .container {
+                  div {
+                    div {
+                      div {
+                        div {
+                          .table {
+
+                            thead {
+
+                              tr {
+                                th {
+                                  text-align: left !important;
+                                  border-bottom: 0px;
+                                }
+
+                                td {
+                                  text-align: left !important;
+                                  border-bottom: 0px;
+                                  border-top: 0px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                        div {
+                          div {
+                            input.form-control {
+                               height: 35px !important;
+                            }
+                          }
+                        }
+                      }
+
+                }
+              }
+
+            }
+            .tab-pane {
+              p {
+                form {
+                  margin: 15px 0px 15px 0px;
+                  padding: 15px 0px 10px 0px !important;
+
+                  div {
+                    .row {
+                      padding: 1rem;
+
+                      .col {
+                        p {
+                          font-size: 0.8rem;
+                        }
+                      }
+
+                      .col {
+                        form {
+                          padding: 0px !important;
+                          margin: 0px;
+
+                          input {
+                            width: 2.5rem;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  div {
+                    div {
+                      p.payment {
+                        padding: 15px !important;
+                      }
+                    }
+                  }
+                  div {
+                    padding: 20px;
+                    a {
+                      button.btn-profile {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div {
+    .row {
+      .col {
+        .container {
+          ul.nav {
+            li.nav-item {
+              color: #170800 !important;
+              a.nav-link {
+                width: 160px !important;
+                text-align: center;
+                border-radius: 0px !important;
+              }
+            }
+          }
+          .tab-content {
+
+            .tab-pane {
+
+              p {
+                .container {
+                  div {
+                    div {
+                      div {
+                        div {
+                          .table {
+
+                            thead {
+
+                              tr {
+                                th {
+                                  text-align: left !important;
+                                  border-bottom: 0px;
+                                }
+                                td {
+                                  text-align: left !important;
+                                  border-bottom: 0px;
+                                  border-top: 0px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    div {
+                      div {
+                        input.form-control {
+                          height: 35px !important;
+                          width: 250px !important;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+            }
+            p {
+              form {
+                div {
+                  .row {
+                    .col {
+                      form {
+                        input {
+                          width: 2.5rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+
+
+.registration {
+  top: 0;
+  z-index: 3 !important;
+  position: absolute;
+  display: block;
+  background-color: rgba(33, 33, 33, 0.58);
+  height: 100% !important;
+  padding-bottom: 100%;
+
+  .card {
+    width: 370px;
+    margin-top: 90px !important;
+    
+    h5.card-header {
+      background-color: #83A34A;
+
+    }
+    form {
+
+      div {
+        div {
+          input {
+            height: 35px !important;
+            width: 128px !important;
+          }
+        }
+        div {
+          input {
+            height: 35px !important;
+            width: 128px !important;
+          }
+        }
+      }
+      input{
+        height: 35px !important;
+        width: 270px !important;
+      }
+      input{
+        height: 35px !important;
+        width: 270px !important;
+      }
+      input{
+        height: 35px !important;
+        width: 270px !important;
+      }
+      input{
+        height: 35px !important;
+        width: 270px !important;
+      }
+      button {
+        background-color: #83A34A;
+        font-weight: bold;
+        color: white;
+        width: 270px;
+        margin: 0px;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

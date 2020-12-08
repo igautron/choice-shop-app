@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom';
 
 
 class Categories extends React.Component {
+
     render() {
         return(
             <div className='container'>
                 <div className='p-2 py-5'>
-                    <MDBRow className='p-2 pt-2'>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10 category p-2 flex-wrap d-inline-flex'>
-                                <Link to='./products'>
+                    <MDBRow className='pt-2 w-100 m-0'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10 category p-2 flex-wrap d-inline-flex mb-2'>
+                                <Link to='./hair'>
                                     <div className="view zoom position-relative img-wrap">
                                         <img
                                             src={require('./../../Image/categories/1/hair.jpg')}
@@ -24,8 +25,8 @@ class Categories extends React.Component {
                                     </div>
                                 </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                                <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                                <Link to='./body'>
                                     <div className="view zoom position-relative img-wrap">
                                         <img
                                         src={require('./../../Image/categories/1/body.JPG')}
@@ -37,8 +38,8 @@ class Categories extends React.Component {
                                     </div>
                                 </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./face'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
                                         src={require('./../../Image/categories/1/face.JPG')}
@@ -50,8 +51,8 @@ class Categories extends React.Component {
                                 </div>
                             </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./goodfood'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
                                         src={require('./../../Image/categories/1/goodfood.JPG')}
@@ -63,8 +64,8 @@ class Categories extends React.Component {
                                 </div>
                             </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./fito'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
                                         src={require('./../../Image/categories/index/dobavki.JPG')}
@@ -76,8 +77,8 @@ class Categories extends React.Component {
                                 </div>
                             </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./home'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
                                         src={require('./../../Image/categories/index/greanmax.JPG')}
@@ -89,8 +90,8 @@ class Categories extends React.Component {
                                 </div>
                             </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./child'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
                                         src={require('./../../Image/categories/1/child.JPG')}
@@ -102,11 +103,11 @@ class Categories extends React.Component {
                                 </div>
                             </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./program1'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
-                                        src={require('./../../Image/categories/progr/IMG_3668.JPG')}
+                                        src={require('./../../Image/categories/progr/fito.JPG')}
                                         className='w-100 h-100'
                                     />
                                     <p className='text-center pb-4 pt-xl-3 pt-lg-3 pt-md-2 pt-sm-2 pt-3 mb-0 h-25'>
@@ -115,11 +116,11 @@ class Categories extends React.Component {
                                 </div>
                             </Link>
                         </MDBCol>
-                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2'>
-                            <Link to='./products'>
+                        <MDBCol className='col-xl-4 col-lg-4 col-md-4 col-sm-4 col-10  category p-2 mb-2'>
+                            <Link to='./program2'>
                                 <div className="view zoom position-relative img-wrap">
                                     <img
-                                        src={require('./../../Image/categories/progr/IMG_3682.JPG')}
+                                        src={require('./../../Image/categories/progr/fito2.jpg')}
                                         className='w-100'
                                     />
                                     <p className='text-center pb-4 pt-xl-3 pt-lg-3 pt-md-2 pt-sm-2 pt-3 mb-0 h-25'>

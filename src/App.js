@@ -31,35 +31,160 @@ import Copyright from '../src/Components/COPYRIGHT/Copyright'
 import Products from '../src/Components/NAV/PRODUCTS/Products';
 import Contacts from './Components/NAV/CONTACTS/Contacts'
 
+import Hair from './Components/CATEGORIES/HAIR/Hair'
+import Body from './Components/CATEGORIES/BODY/Body'
+import Face from './Components/CATEGORIES/FACE/Face'
+import Goodfood from './Components/CATEGORIES/GOODFOOD/Goodfood'
+import Fito from './Components/CATEGORIES/FITO/Fito'
+import Home from './Components/CATEGORIES/HOME/Home'
+import Child from './Components/CATEGORIES/CHILD/Child'
+import Program1 from './Components/CATEGORIES/PROGRAM1/Program1'
+import Program2 from './Components/CATEGORIES/PROGRAM2/Program2'
+
+import Autorization from './Backend/AUTORIZATION/Autorization'
+import Profile from './Backend/PROFILE/Profile'
+import ForgotPassword from './Backend/AUTORIZATION/ForgotPassword'
+import Registration from './Backend/REGISTRATION/Registration'
+import RegistrationRealized from './Backend/REGISTRATION/RegistrationRealized'
+import Bin from './Backend/BIN/Bin'
+import Order from './Backend/ORDER/Order'
+import OrderRealized from './Backend/ORDER/OrderRealized'
+import Mobile from './Components/MOBILE/Mobile'
 
 
-function App() {
+import Details from './Components/NAV/ITEMS/Item/Details'
 
-  return (
-        <Router>
-            <Top />
-            <Nav />
-            <Slide />
-            <Switch>
-                <Route path='/' exact>
-                    <About />
-                    <Benefits />
-                    <Production />
-                    <Info />
-                    <Categories />
-                    <Label />
-                </Route>
-                <Route path='/Products'>
-                    <Products />
-                </Route>
-                <Route path='/Contacts'>
-                    <Contacts />
-                </Route>
-            </Switch>
-            <Footer />
-            <Copyright />
-        </Router>
-  );
+class App extends React.Component {
+
+    state = {
+        token: '',
+        user: ''
+    }
+
+    setUserData = (data) => {
+        this.setState({user:data.user, token:data.token})
+    }
+
+    componentDidMount() {
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user'));
+        this.setState({ user, token });
+    }
+
+
+
+    render() {
+        return (
+            <Router>
+                <Top appState={this.state} setUserData={this.setUserData}/>
+                <Nav />
+                <Slide />
+                <Switch>
+                    <Route path='/' exact>
+                        <Profile />
+                        <About />
+                        <Benefits />
+                        <Production />
+                        <Info />
+                        <Categories />
+                        <Label />
+                    </Route>
+                    <Route path='/Products'>
+                        <Products appState={this.state} setUserData={this.setUserData}/>
+                    </Route>
+                    <Route path='/Contacts'>
+                        <Contacts />
+                    </Route>
+                    <Route path='/hair'>
+                        <Hair />
+                    </Route>
+                    <Route path='/body'>
+                        <Body />
+                    </Route>
+                    <Route path='/face'>
+                        <Face />
+                    </Route>
+                    <Route path='/goodfood'>
+                        <Goodfood />
+                    </Route>
+                    <Route path='/fito'>
+                        <Fito />
+                    </Route>
+                    <Route path='/home'>
+                        <Home />
+                    </Route>
+                    <Route path='/child'>
+                        <Child />
+                    </Route>
+                    <Route path='/program1'>
+                        <Program1 />
+                    </Route>
+                    <Route path='/program2'>
+                        <Program2 />
+                    </Route>
+                    <Route path='/autorization'>
+                        <Autorization />
+                        <About />
+                        <Benefits />
+                        <Production />
+                        <Info />
+                        <Categories />
+                        <Label />
+                    </Route>
+                    <Route path='/profile'>
+                        <Profile appState={this.state} setUserData={this.setUserData} tabIndex="1" />
+                    </Route>
+                    <Route path='/myOrders'>
+                        <Profile appState={this.state} setUserData={this.setUserData} tabIndex="2" />
+                    </Route>
+                    <Route path='/forgotPassword'>
+                        <ForgotPassword />
+                        <About />
+                        <Benefits />
+                        <Production />
+                        <Info />
+                        <Categories />
+                        <Label />
+                    </Route>
+                    <Route path='/registration'>
+                        <Registration />
+                        <About />
+                        <Benefits />
+                        <Production />
+                        <Info />
+                        <Categories />
+                        <Label />
+                    </Route>
+                    <Route path='/registrationRealized'>
+                        <RegistrationRealized />
+                    </Route>
+                    <Route path='/bin'>
+                        <Bin />
+                        <About />
+                        <Benefits />
+                        <Production />
+                        <Info />
+                        <Categories />
+                        <Label />
+                    </Route>
+                    <Route path='/order'>
+                        <Order />
+                    </Route>
+                    <Route path='/orderRealized'>
+                        <OrderRealized />
+                    </Route>
+                    <Route path='/details'>
+                        <Details />
+                    </Route>
+                    <Route path='/mobile'>
+                        <Mobile />
+                    </Route>
+                </Switch>
+                <Footer />
+                <Copyright />
+            </Router>
+        );
+    }
 }
 
 export default App;

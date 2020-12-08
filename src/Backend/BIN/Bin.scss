@@ -1,0 +1,221 @@
+
+
+.bin {
+  top: 0;
+  width: 800px!important;
+  z-index: 3;
+  position: absolute;
+  display: block;
+  background-color: rgba(33, 33, 33, 0.58);
+
+  .card {
+    width: 800px;
+    h5.card-header {
+      background-color: #83A34A;
+
+    }
+
+    form {
+      div {
+        .row {
+          .col {
+            form {
+              input {
+                width: 3rem;
+              }
+            }
+          }
+          .col {
+            p.price {
+              line-height:  35px !important;
+            }
+          }
+          .col {
+            button {
+              i {
+                line-height: 35px !important;
+              }
+            }
+          }
+        }
+      }
+      div {
+        div {
+          p {
+
+          }
+        }
+
+        div {
+          button.btn-bin-choice {
+            width: 300px !important;
+            background-color: #83A34A;
+            color: white;
+            font-weight: bold;
+          }
+        }
+      }
+
+      div {
+        p {
+          link {
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 576px) {
+
+  .bin {
+
+    top: 0;
+    z-index: 3;
+    position: absolute;
+    display: block;
+    background-color: rgba(33, 33, 33, 0.58);
+
+    .card {
+      width: 470px !important;
+      margin: 0px;
+      h5.card-header {
+        background-color: #83A34A;
+
+      }
+
+      form {
+        div {
+          .row {
+              .col {
+                form {
+                  input {
+                    width: 2.5rem;
+                  }
+                }
+              }
+              .col {
+                p.order-item {
+                  font-size: 0.6rem;
+                }
+              }
+              .col {
+                p.price {
+                  font-size: 0.8rem;
+                  line-height:  30px !important;
+                }
+              }
+              .col {
+                button {
+                  i {
+                    line-height: 30px !important;
+                  }
+                }
+              }
+          }
+        }
+        div {
+          div {
+            p {
+            }
+          }
+
+          div {
+            button.btn-bin-choice {
+              background-color: #83A34A;
+              width: 150px !important;
+              color: white;
+              font-weight: bold;
+            }
+          }
+        }
+
+        div {
+          p {
+            font-size: 0.8rem;
+            link {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .bin {
+    top: 0;
+    z-index: 3;
+    position: absolute;
+    display: block;
+    margin: 0px;
+    background-color: rgba(33, 33, 33, 0.58);
+
+    .card {
+      width: 600px;
+
+      h5.card-header {
+        background-color: #83A34A;
+
+      }
+
+      form {
+        div {
+          .row {
+            .col {
+              form {
+                input {
+                  width: 2.5rem;
+                }
+              }
+            }
+            .col {
+              p.order-item {
+                font-size: 0.7rem;
+              }
+            }
+            .col {
+              p.price {
+                font-size: 0.8rem;
+                line-height:  30px !important;
+              }
+            }
+            .col {
+              button {
+                i {
+                  line-height: 30px !important;
+                }
+              }
+            }
+          }
+        }
+        div {
+          div {
+            p {
+            }
+          }
+
+          div {
+            button.btn-bin-choice {
+              background-color: #83A34A;
+              width: 210px !important;
+              color: white;
+              font-weight: bold;
+            }
+          }
+        }
+
+        div {
+          p {
+            font-size: 0.8rem;
+            link {
+            }
+          }
+        }
+      }
+    }
+  }
+}

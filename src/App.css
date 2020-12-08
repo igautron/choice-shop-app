@@ -43,3 +43,8 @@
   justify-content: center;
   margin: auto;
 }
+
+
+button:focus {
+  outline: none !important;
+}

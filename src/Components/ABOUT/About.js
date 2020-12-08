@@ -8,10 +8,10 @@ class About extends React.Component  {
     render() {
         return (
             <section className="mb-5 mt-3 container">
-                <h2 className="h2-responsive font-weight-bold text-center py-5 about-text">
+                <h2 className="h2-responsive font-weight-bold text-center pt-5 pb-3 about-text">
                     ПРО КОМПАНІЮ
                 </h2>
-                <h5 className="black-text about-text pb-5 p-2 w-responsive w-100">
+                <h5 className="black-text about-text pb-3 p-2 w-responsive w-100">
                     Компанія «CHOICE» являється лідером у виробництві натуральних косметичних
                     засобів та фітокомплексів лікувального призначення, заснована у місті Києві
                     у 2004 році. Фітокомплекси мають вміст лише натурального характеру та

@@ -1,0 +1,103 @@
+
+.card {
+    .row {
+        .col {
+            .col {
+                label {
+                    i {
+                        font-size: 1rem;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+.card {
+
+}
+
+
+
+
+
+
+
+
+
+
+.rccs, .rccs__card, .rccs__card--unknown {
+    width: 260px !important;
+    height: 150px !important;
+}
+
+.panel-title {
+    font-size: 1.2rem;
+}
+
+
+.panel-name {
+    font-size: 32px !important;
+}
+
+.private-policy {
+    font-size: 12px;
+}
+
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 550px !important;
+    }
+
+    .custom-control label {
+        font-size: 1rem !important;
+    }
+
+    .input-shipment {
+        width: 15rem;
+    }
+
+    .link-privacy {
+        width: 100px;
+    }
+
+    .btn-block {
+        width: 110px !important;
+    }
+
+    .panel-item {
+        min-width: 370px !important;
+    }
+
+    .ccv-code {
+        width: 90px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        max-width: 750px !important;
+    }
+
+    .panel-item {
+        min-width: 370px !important;
+    }
+
+    .ccv-code {
+        width: 90px !important;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+
+
+
+
+

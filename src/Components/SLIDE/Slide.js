@@ -21,7 +21,7 @@ class Slide extends React.Component  {
                             <MDBView>
                                 <img
                                     className="d-block h-100 w-100"
-                                    src={require('../../Image/slider/slider6.png')}
+                                    src={require('../../Image/slider/PANO1.jpg')}
                                     alt="First slide"
                                 />
                                 <MDBMask overlay="light" />

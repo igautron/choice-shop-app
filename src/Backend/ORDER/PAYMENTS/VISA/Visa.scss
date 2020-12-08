@@ -1,0 +1,32 @@
+.container {
+  .row {
+    .order-item {
+      justify-content: center;
+      margin: 0 auto;
+      width: 310px;
+      .order {
+        .order-heading {
+          .payment-form {
+            .rccs {
+              .rccs__card, rccs__card--unknown {
+                width: 250px !important;
+                height: 140px !important;
+              }
+            }
+            form {
+              .form-group {
+
+              }
+              .row {
+                width: 100%;
+              }
+            }
+
+          }
+
+        }
+      }
+    }
+
+  }
+}

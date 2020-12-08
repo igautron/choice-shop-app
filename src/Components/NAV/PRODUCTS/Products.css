@@ -1,5 +1,5 @@
 .prod-name {
-  color: #170800;
+  color: #000000;
   letter-spacing: normal;
 }
 
@@ -9,6 +9,7 @@
 
 .prod-price {
   letter-spacing: normal;
+  font-weight: bold;
 }
 
 .prod-btn {
@@ -35,7 +36,6 @@
 .number-input input[type="number"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
-  appearance: textfield;
 }
 .number-input input[type=number]::-webkit-inner-spin-button,
 .number-input input[type=number]::-webkit-outer-spin-button {
@@ -325,6 +325,10 @@
     font-size:  0.8rem;
   }
 
+  .prod-img {
+    height: 339px;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -375,6 +379,10 @@
     height: ;
   }
 
+  .prod-img {
+    height: 260px;
+  }
+
 }
 
 @media (min-width: 991px) and (max-width: 1200px) {
@@ -399,7 +407,7 @@
   }
 
   .prod-name {
-    height: 4rem;
+    height: 4.5rem;
   }
 
   .prod-describe {
@@ -412,6 +420,10 @@
 
   .prod-btn {
     height: ;
+  }
+
+  .prod-img {
+    height: 375px;
   }
 
 }

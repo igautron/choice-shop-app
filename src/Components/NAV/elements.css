@@ -1,0 +1,100 @@
+.button-close-login {
+    transform: translateX(50px);
+}
+
+
+.btn-aut {
+    transform: translate(50px, -7px);
+    background: transparent !important;
+}
+
+
+.btn-cart {
+    transform: translate(260px, -7px);
+    background: transparent !important;
+}
+
+
+.modal-login {
+    width: 370px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.modal-content, .modal-body {
+    height: 100% !important;
+    padding: 0px;
+}
+
+.modal-search {
+    width: 450px !important;
+}
+
+
+.card-header {
+    background-color: #83A34A;
+}
+
+/*bin*/
+
+.modal-dialog {
+    max-width: 800px !important;
+}
+
+
+
+input.input-search {
+    width: 300px !important;
+    height: 35px !important;
+}
+
+
+.profile-menu {
+    display: block !important;
+    color: #fff;
+    position: absolute !important;
+    background: #5c8443;
+    padding: 10px;
+
+}
+
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 470px !important;
+    }
+
+    .modal-bin {
+        width: 470px !important;
+    }
+
+    .btn-cart {
+        transform: translate(107px, -7px);
+        background: transparent !important;
+    }
+
+    .bin {
+        width: 470px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .modal-dialog {
+        max-width: 600px !important;
+    }
+
+    .modal-bin {
+        width: 600px !important;
+    }
+
+    .btn-cart {
+        transform: translate(170px, -7px);
+        background: transparent !important;
+    }
+
+    .bin {
+        width: 470px !important;
+    }
+
+}
