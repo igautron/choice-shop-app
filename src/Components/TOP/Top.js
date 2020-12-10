@@ -58,13 +58,13 @@ class Top extends React.Component  {
                              >
                                  <MDBNavbarNav left>
                                      <MDBNavItem className='py-2 font-weight-bold white-ic' active>
-                                         <Link to='/' className='white-ic px-4'>ГОЛОВНА</Link>
+                                         <Link onClick={this.toggleCollapse('navbarCollapse1')} to='/' className='white-ic px-4'>ГОЛОВНА</Link>
                                      </MDBNavItem>
                                      <MDBNavItem className='py-2 font-weight-bold white-ic'>
-                                         <Link to='./products' className='white-ic px-4'>ПРОДУКЦІЯ</Link>
+                                         <Link onClick={this.toggleCollapse('navbarCollapse1')} to='./products' className='white-ic px-4'>ПРОДУКЦІЯ</Link>
                                      </MDBNavItem>
                                      <MDBNavItem className='py-2 font-weight-bold white-ic'>
-                                         <Link to='./contacts' className='white-ic px-4'>КОНТАКТИ</Link>
+                                         <Link onClick={this.toggleCollapse('navbarCollapse1')} to='./contacts' className='white-ic px-4'>КОНТАКТИ</Link>
                                      </MDBNavItem>
                                  </MDBNavbarNav>
                              </MDBCollapse>

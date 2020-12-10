@@ -27,6 +27,9 @@ class Profile extends Component {
             old:'',
             new:'',
             confirm:'',
+        },
+        items: {
+            content: ''
         }
     }
 
