@@ -18,44 +18,40 @@ import './Profile.scss'
 import {Link} from "react-router-dom";
 import Autorization from './../AUTORIZATION/Autorization'
 
+let cl = console.log
+
 class Profile extends Component {
 
     state = {
+        items: {
+            content: '',
+            // contentCard: '1',
+        },
         tabIndex: '1',
         changePasswordError: '',
         passwordInputs:{
             old:'',
             new:'',
             confirm:'',
-        }
+        },
+        alertTab1: '',
+        errors: [],
+        passwordErrors: [],
     }
 
-    togglePills = tab => () => {
-        const { activePills } = this.state;
-        if (activePills !== tab) {
-            this.setState({
-                tabIndex: tab
-            });
-        }
+    togglePills = (tabIndex) => {
+        cl(tabIndex)
+        this.setState({ tabIndex });
     };
 
     componentDidMount() { // получение данных с сервера
-        console.log(this.props)
         this.setState({user:this.props.appState.user});
     }
 
     componentDidUpdate(prevProps) { // получение новых пропсов
         if(prevProps.tabIndex !== this.props.tabIndex){
-            let items = { ...this.state.items };
-            items.content = this.props.tabIndex
-            this.setState({items});
+            this.setState({tabIndex: this.props.tabIndex});
         }
-    }
-
-    changeInputHandler = (event) => {
-        let userData = {...this.props.appState.user}
-        userData[event.target.name] = event.target.value
-        this.props.setUserData({user: userData})
     }
 
     changeInputHandler = (event) => {
@@ -70,8 +66,8 @@ class Profile extends Component {
         this.setState({passwordInputs})
     }
 
-
     saveUserData = () => {
+        cl(this.props.appState)
         this.setState({alertTab1: ''})
         fetch('http://choice-server.loc/api/userUpdate', {
             method: 'POST', // или 'PUT'
@@ -86,12 +82,20 @@ class Profile extends Component {
             return response.json();
         }).then((data) => {
             if (data.success && data.success === 'ok') {
-                this.setState({alertTab1: 'Данные успешно сохранены'})
+                this.setState({alertTab1: 'Данные успешно сохранены', errors: []})
                 localStorage.setItem('user', JSON.stringify(data.user)); // объект user преобразовуем в строку (JSON.stringify)
             }else{
-                this.setState({alertTab1: 'Error!'})
+                if(data.errors) this.setState({errors: this.getErrorsList(data.errors)})
             }
         });
+    }
+
+    getErrorsList = (errors) => {
+        let errorsList = []
+        for(let error in errors){
+            errorsList.push(errors[error])
+        }
+        return errorsList
     }
 
     changePassword = () => {
@@ -118,7 +122,7 @@ class Profile extends Component {
 
 
     render() {
-        let tabIndex = this.state.items.content || this.props.tabIndex || '1'
+        let tabIndex = this.state.tabIndex || this.props.tabIndex || '1'
         let user = this.props.appState.user
         if (!user) {
             return (
@@ -134,7 +138,7 @@ class Profile extends Component {
                     </div>
                 </React.Fragment>
             )
-            return (
+        }else return (
                 <div className='container py-2'>
                     <h2 className="h2-responsive font-weight-bold text-center pt-5 pb-3 about-text">
                         Особиста сторінка
@@ -145,19 +149,19 @@ class Profile extends Component {
                                 <MDBNav className='nav-pills m-auto justify-content-center'>
                                     <MDBNavItem className='mx-3 my-5'>
                                         <MDBNavLink className='btn-outline-light-green btn-pills font-weight-bold' to='#'
-                                                 active={tabIndex === '1'} onClick={this.togglePills("content", '1')} link>
+                                                 active={tabIndex === '1'} onClick={()=>{this.togglePills('1')}} link>
                                             Профіль
                                         </MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem className='m-3 my-5'>
                                         <MDBNavLink className='btn-outline-light-green btn-pills font-weight-normal' to='#'
-                                                 active={tabIndex === '2'} onClick={this.togglePills("content", "2")} link>
+                                                 active={tabIndex === '2'} onClick={()=>{this.togglePills("2")}} link>
                                             Замовлення
                                         </MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem className='m-3 my-5'>
                                         <MDBNavLink className='btn-outline-light-green btn-pills font-weight-normal' to='#'
-                                                 active={tabIndex === '3'} onClick={this.togglePills("content", '3')} link>
+                                                 active={tabIndex === '3'} onClick={()=>{this.togglePills('3')}} link>
                                             Сподобалось
                                         </MDBNavLink>
                                     </MDBNavItem>
@@ -176,19 +180,19 @@ class Profile extends Component {
                                                                 <MDBTableHead>
                                                                     <tr>
                                                                         <th>Ім'я</th>
-                                                                        <td>Яна</td>
+                                                                        <td>{user.name}</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Фамілія</th>
-                                                                        <td>Кеух</td>
+                                                                        <td>{user.last_name}</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Ел.адреса</th>
-                                                                        <td>ianagautron@gmail.com</td>
+                                                                        <td>{user.email}</td>
                                                                     </tr>
                                                                     <tr>
                                                                         <th>Телефон</th>
-                                                                        <td>+380671088799</td>
+                                                                        <td>{user.phone}</td>
                                                                     </tr>
                                                                 </MDBTableHead>
                                                             </MDBTable>
@@ -200,15 +204,21 @@ class Profile extends Component {
                                                             className="text-center border border-light  p-xl-5 p-lg-5 p-lg-5 p-md-5 p-sm-5 p-5"
                                                             action="#!">
                                                             <p className='pb-3'>Внести зміни</p>
-                                                            <div className='image'></div>
-                                                            <input onChange={this.changeInputHandler} value={user.name} type="text" className="form-control mb-4" placeholder="Ім'я"/>
-                                                            <input onChange={this.changeInputHandler} value={user.thirname} type="text" className="form-control mb-4" placeholder="Фамілія"/>
-                                                            <input onChange={this.changeInputHandler} value={user.email} type="email" className="form-control mb-4" placeholder="Електронна пошта"/>
-                                                            <input onChange={this.changeInputHandler} value={user.phone} type="text" className="form-control mb-4" placeholder="Номер телефону" aria-describedby="defaultRegisterFormPhoneHelpBlock"/>
+                                                            <div>{this.state.alertTab1}</div>
+                                                            <ul className="errors-list no-list-style">
+                                                            {this.state.errors.map((error) => (
+                                                                <li style={{color:'red'}}>{error}</li>
+                                                            ))}
+                                                            </ul>
+                                                            <input onChange={this.changeInputHandler} name="name" value={user.name} type="text" className="form-control mb-4" placeholder="Ім'я"/>
+                                                            <input onChange={this.changeInputHandler} name="last_name" value={user.last_name} type="text" className="form-control mb-4" placeholder="Фамілія"/>
+                                                            <input onChange={this.changeInputHandler} name="email" value={user.email} type="email" className="form-control mb-4" placeholder="Електронна пошта"/>
+                                                            <input onChange={this.changeInputHandler} name="phone" value={user.phone} type="text" className="form-control mb-4" placeholder="Номер телефону" aria-describedby="defaultRegisterFormPhoneHelpBlock"/>
                                                             <input type="checkbox" className="custom-control-input"/>
-                                                                <input onChange={this.changePasswordInputHandler} name="old" value={this.state.passwordInputs.old} type="password" className="form-control " placeholder="Старий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
-                                                                <input onChange={this.changePasswordInputHandler} name="new" value={this.state.passwordInputs.new} type="password" className="form-control " placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
-                                                                <input onChange={this.changePasswordInputHandler} name="confirm" value={this.state.passwordInputs.confirm} type="password" className="form-control " placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                                <input onChange={this.changePasswordInputHandler} name="old" value={this.state.passwordInputs.old} type="" className="form-control " placeholder="Старий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                                <input onChange={this.changePasswordInputHandler} name="new" value={this.state.passwordInputs.new} type="" className="form-control " placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                                <input onChange={this.changePasswordInputHandler} name="confirm" value={this.state.passwordInputs.confirm} type="" className="form-control " placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                            <div style={{color:'red'}}>{this.state.changePasswordError}</div>
                                                             <button onClick={this.changePassword} className='bg-transparent border-0 m-2'>Змінити пароль</button>
                                                             <small id="defaultRegisterFormPasswordHelpBlock"
                                                                    className="form-text text-muted mb-4">
@@ -321,7 +331,7 @@ class Profile extends Component {
                     </MDBRow>
                 </div>
             );
-        }
+
     }
 }
 

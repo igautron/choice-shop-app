@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component} from 'react';
 import './Nav.scss'
-import {Link, BrowserRouter as Router } from 'react-router-dom';
+import {Link, NavLink, BrowserRouter as Router } from 'react-router-dom';
 import {MDBCardImage, MDBRow, MDBCol, MDBFormInline, MDBCollapse, MDBNavbarNav, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter, MDBBtn} from "mdbreact";
 
 import ShopBin from "../../Backend/BIN/Bin"
@@ -44,9 +44,17 @@ class Nav extends React.Component  {
 
     modalBody = () => {
         if (this.state.modalBody === 'authorization') {
-            return <Autorization changeModalBody={this.changeModalBody} loginModalToggle={this.loginModalToggle} />
+            return <Autorization 
+              changeModalBody={this.changeModalBody} 
+              loginModalToggle={this.loginModalToggle}
+              appState={this.props.appState}
+              setUserData={this.props.setUserData} />
         }else if(this.state.modalBody === 'registration'){
-            return <Registration changeModalBody={this.changeModalBody} loginModalToggle={this.loginModalToggle} />
+            return <Registration 
+              changeModalBody={this.changeModalBody} 
+              loginModalToggle={this.loginModalToggle}
+              appState={this.props.appState}
+              setUserData={this.props.setUserData} />
         }else if(this.state.modalBody === 'successRgistration'){
             return <div>Вы успешно зарегистрированы!</div>
         }else{
@@ -72,11 +80,11 @@ class Nav extends React.Component  {
 
     profileMenu = () => {
         let user = localStorage.getItem('user', 1);
-        if (user && this.state.showProfileMenu) {
+        if (user) {
             return (
                 <ul className="profile-menu">
-                    <li>Личный кабинет</li>
-                    <li>Заказы</li>
+                    <li><NavLink to="/profile">Личный кабинет</NavLink></li>
+                    <li><NavLink to="/myOrders">Заказы</NavLink></li>
                     <li>Избранное</li>
                     <li onClick={this.logout}>Выход</li>
                 </ul>

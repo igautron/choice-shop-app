@@ -62,7 +62,7 @@ class App extends React.Component {
     }
 
     setUserData = (data) => {
-        this.setState({user:data.user, token:data.token})
+        this.setState(data)
     }
 
     componentDidMount() {
@@ -77,11 +77,10 @@ class App extends React.Component {
         return (
             <Router>
                 <Top appState={this.state} setUserData={this.setUserData}/>
-                <Nav />
+                <Nav appState={this.state} setUserData={this.setUserData}/>
                 <Slide />
                 <Switch>
                     <Route path='/' exact>
-                        <Profile />
                         <About />
                         <Benefits />
                         <Production />
@@ -89,7 +88,13 @@ class App extends React.Component {
                         <Categories />
                         <Label />
                     </Route>
-                    <Route path='/Products'>
+                    <Route path='/profile'>
+                        <Profile appState={this.state} setUserData={this.setUserData} tabIndex="1" />
+                    </Route>
+                    <Route path='/myOrders'>
+                        <Profile appState={this.state} setUserData={this.setUserData} tabIndex="2" />
+                    </Route>
+                    <Route path='/products'>
                         <Products appState={this.state} setUserData={this.setUserData}/>
                     </Route>
                     <Route path='/Contacts'>
