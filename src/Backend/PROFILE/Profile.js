@@ -137,7 +137,7 @@ class Profile extends Component {
                     </div>
                 </React.Fragment>
             )
-            return (
+        } else return (
                 <div className='container py-2'>
                     <h2 className="h2-responsive font-weight-bold text-center pt-5 pb-3 about-text">
                         Особиста сторінка
@@ -325,7 +325,6 @@ class Profile extends Component {
                 </div>
             );
         }
-    }
 }
 
 export default Profile;

@@ -81,7 +81,7 @@ class App extends React.Component {
                 <Slide />
                 <Switch>
                     <Route path='/' exact>
-                        <Profile />
+                        <Profile appState={this.state} setUserData={this.setUserData} tabIndex="1" />
                         <About />
                         <Benefits />
                         <Production />
