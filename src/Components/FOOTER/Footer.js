@@ -55,7 +55,7 @@ class Footer extends React.Component  {
                                    <p className='white-ic font-weight-normal pl-5 footer-adress'><i className='fas fa-map-marker-alt pl-1 pr-3 text-white'></i>м. Київ, вул. Данченко 32, салон краси та магазин YVONNE</p>
                                    <p className='green-ic font-weight-bold pl-5 footer-tell'><i className="fas fa-phone pr-2 "></i>+38 (067) 998 40 42</p>
                                    <p className='green-ic font-weight-bold pl-5 footer-tell'><i className="fas fa-phone pr-2"></i>+38 (067) 108 87 99</p>
-                                   <p className='white-ic font-weight-normal pl-5 footer-tell'><i className='far fa-envelope pr-2 text-white'></i>asbergint@gmail.com</p>
+                                   <p className='white-ic font-weight-normal pl-5 footer-tell'><i className='far fa-envelope pr-2 text-white'></i><Link to='/writetous'>asbergint@gmail.com</Link></p>
                                    <p className='white-ic font-weight-normal pl-5'><i className='fab fa-instagram pr-2 text-white'></i>choice</p>
                                    <p className='white-ic font-weight-normal pl-5'><i className='fab fa-facebook pr-2 text-white'></i>choice</p>
                                </MDBCol>

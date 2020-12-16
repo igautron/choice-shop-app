@@ -50,6 +50,7 @@ import Bin from './Backend/BIN/Bin'
 import Order from './Backend/ORDER/Order'
 import OrderRealized from './Backend/ORDER/OrderRealized'
 import Mobile from './Components/MOBILE/Mobile'
+import Writetous from './Backend/WRITETOUS/writetous'
 
 
 import Details from './Components/NAV/ITEMS/Item/Details'
@@ -184,6 +185,9 @@ class App extends React.Component {
                     </Route>
                     <Route path='/mobile'>
                         <Mobile />
+                    </Route>
+                    <Route path='/writetous'>
+                        <Writetous />
                     </Route>
                 </Switch>
                 <Footer />
