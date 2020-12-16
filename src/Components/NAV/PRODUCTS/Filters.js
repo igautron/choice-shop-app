@@ -96,19 +96,17 @@ class Filters extends React.Component  {
     }
 
 
-
-
-
     chooseSubtypeHandle(event) {
         const input = event.target
         let subtype = {...this.state.subtype}
+        console.log(subtype)
         if(input.checked) {
             subtype[input.value] = 1
         } else {
             delete subtype[input.value]
         }
         this.props.setFilterSubtype(subtype)
-        this.setState(subtype)
+        this.setState({subtype})
     }
 
     chooseAppHandle(event) {
@@ -120,7 +118,7 @@ class Filters extends React.Component  {
             delete apps[input.value]
         }
         this.props.setFilterApp(apps)
-        this.setState(apps)
+        this.setState({apps})
     }
 
     chooseBrandHandle(event) {
@@ -132,7 +130,7 @@ class Filters extends React.Component  {
             delete brands[input.value]
         }
         this.props.setFilterBrand(brands)
-        this.setState(brands)
+        this.setState({brands})
     }
 
     chooseSeriaHandle(event) {
@@ -144,7 +142,7 @@ class Filters extends React.Component  {
             delete serias[input.value]
         }
         this.props.setFilterSeria(serias)
-        this.setState(serias)
+        this.setState({serias})
     }
 
     chooseGenderHandle(event) {

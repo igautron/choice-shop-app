@@ -22,7 +22,7 @@ import Item from './../ITEMS/Item/Item'
 
 class Products extends React.Component  {
 
-    constructor(props) {
+  constructor(props) {
         super(props)
 
 
@@ -46,11 +46,14 @@ class Products extends React.Component  {
     this.setFilterSeria   = this.setFilterSeria.bind(this)
     this.setFilterGender  = this.setFilterGender.bind(this)
 
-}
+  }
 
+  filter = {
+            price: {}
+  }
 
 componentDidMount(props) {
-    fetch('http://choice-server.loc/products')
+    fetch('http://choice-server.loc/api/products')
         .then(response => response.json())
         .then(data => this.setState( {products: data.products}));
 }
@@ -110,9 +113,9 @@ componentDidMount(props) {
     doAjax() {
         let url
         if (Object.keys(this.filter).length !== 0) {
-            url = 'http://choice-server.loc/filter?filter='+encodeURIComponent(JSON.stringify(this.filter))
+            url = 'http://choice-server.loc/api/filter?filter='+encodeURIComponent(JSON.stringify(this.filter))
         }else{
-            url = 'http://choice-server.loc/products'
+            url = 'http://choice-server.loc/api/products'
         }
         fetch(url)
             .then(response => response.json())
