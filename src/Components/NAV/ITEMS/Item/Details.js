@@ -67,7 +67,7 @@ class Details extends React.Component {
 
     componentDidMount(props) {
         const itemId = window.location.pathname.split('/').pop()
-        fetch('http://yvonne-server.loc/products/'+itemId)
+        fetch('http://choice-server.loc/products/'+itemId)
             .then(response => response.json())
             .then(product => {
               this.setState({product: product.data})

@@ -52,7 +52,7 @@ class Contactform extends React.Component {
             this.setState({alert: 'Введіть номер телефону!'})
         }
 
-        let url = 'http://yvonneshop.com.ua/telegram/'
+        let url = 'http://choice.com.ua/telegram/'
         fetch(url, {
             method: 'POST', // или 'PUT'
             body: new URLSearchParams(this.state.form).toString(),
