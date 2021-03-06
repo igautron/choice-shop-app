@@ -10,18 +10,16 @@ class Contacts extends React.Component  {
         return (
              <div>
                  <div className='container mb-5 mt-3'>
-                     <h2 className="h2-responsive font-weight-bold text-center py-5 about-text m-0">
+                     <h2 className="h2-responsive font-weight-bold text-center py-sm-5 py-3 about-text m-0">
                          КОНТАКТИ
                      </h2>
-                     <MDBRow className='flex-wrap py-0 p-2'>
-                         <MDBCol className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 py-xl-5 py-lg-5 py-md-0 py-sm-0 py-0'>
-                             <h4 className='px-2 pb-4 font-weight-bold'>Контактна інформація</h4>
-                             <p className='font-weight-normal px-2 py-1 contact-text'><i className='fas fa-map-marker-alt pl-1 pr-4 item-contact'></i>м. Київ, вул. Данченко 32, салон краси та магазин YVONNE</p>
-                             <p className='font-weight-normal px-2 py-1 contact-text'><i className='fas fa-phone pr-4 item-contact'></i>+38 (067) 998 40 42</p>
-                             <p className='font-weight-normal px-2 py-1 contact-text'><i className='fas fa-phone pr-4 item-contact'></i>+38 (067) 108 87 99</p>
-                             <p className='font-weight-normal px-2 py-1 contact-text'><i className='far fa-envelope pr-4 item-contact'></i>ianagautron@gmail.com</p>
-                             <p className='font-weight-normal px-2 py-1 contact-text'><i className='fab fa-instagram pr-4 item-contact'></i>choice</p>
-                             <p className='font-weight-normal px-2 py-1 contact-text'><i className='fab fa-facebook pr-4 item-contact'></i>choice</p>
+                     <MDBRow className='flex-wrap py-0 p-2 w-100 m-0'>
+                         <MDBCol className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 py-xl-5 py-lg-5 py-md-0 py-sm-0 py-0 pr-0'>
+                             <p className='font-weight-normal px-0 px-sm-2 py-1 contact-text'><i className='fas fa-map-marker-alt pl-1 pr-4 item-contact'></i><a href='https://goo.gl/maps/bzk1W5AZCec4QVR89' className='black-ic'>м. Київ, вул. Данченко 32, салон краси та магазин YVONNE</a></p>
+                             <p className='font-weight-normal  px-0 px-sm-2 py-1 contact-text'><i className='fas fa-phone pr-4 item-contact'></i><a href='tel:+380679984042' className='black-ic'>+38 (067) 998 40 42</a></p>
+                             <p className='font-weight-normal  px-0 px-sm-2 py-1 contact-text'><i className='fas fa-phone pr-4 item-contact'></i><a href='tel:+380671088799' className='black-ic'>+38 (067) 108 87 99</a></p>
+                             <p className='font-weight-normal  px-0 px-sm-2 py-1 contact-text'><i className='far fa-envelope pr-4 item-contact'></i>ianagautron@gmail.com</p>
+                             <p className='font-weight-normal  px-0 px-sm-2 py-1 contact-text'><i className='fab fa-instagram pr-4 item-contact'></i><a href='https://www.instagram.com/choice_cosmetics/' className='black-ic'>choice_cosmetics</a></p>
                          </MDBCol>
                          <MDBCol className='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 pt-4'>
                              <div

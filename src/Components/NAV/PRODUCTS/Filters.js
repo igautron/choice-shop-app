@@ -19,8 +19,6 @@ class Filters extends React.Component  {
            brandArray: [],
            seriaArray: [],
            genderArray: []
-
-
        }
 
        this.chooseSubtypeHandle = this.chooseSubtypeHandle.bind(this)

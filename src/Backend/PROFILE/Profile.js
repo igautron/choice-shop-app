@@ -15,6 +15,7 @@ import {
 } from 'mdbreact';
 
 import './Profile.scss'
+import './profile.css'
 import {Link} from "react-router-dom";
 import Autorization from './../AUTORIZATION/Autorization'
 
@@ -142,7 +143,7 @@ class Profile extends Component {
 
         }else return (
                 <div className='container py-2'>
-                    <h2 className="h2-responsive font-weight-bold text-center pt-5 pb-3 about-text">
+                    <h2 className="h2-responsive font-weight-bold text-center py-sm-5 py-3 about-text m-0">
                         Особиста сторінка
                     </h2>
                     <MDBRow className='w-100 justify-content-center m-0'>
@@ -174,7 +175,7 @@ class Profile extends Component {
                                             <div className='container border-light'>
                                                 <div className='d-inline-flex flex-wrap w-100 '>
                                                     <div
-                                                        className="border-light col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center p-xl-5 p-lg-5 p-lg-5 p-md-5 p-sm-5 p-3 px-5"
+                                                        className="border-light col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 text-center p-xl-5 p-lg-5 p-lg-5 p-md-5 p-sm-5 p-3 px-3 px-sm-5"
                                                         action="#!">
                                                         <p>Інформація профілю</p>
                                                         <div>
@@ -203,7 +204,7 @@ class Profile extends Component {
                                                     <div
                                                         className='col-12 col-xl-7 col-lg-7 col-md-6 col-sm-12 text-center'>
                                                         <div
-                                                            className="text-center border border-light  p-xl-5 p-lg-5 p-lg-5 p-md-5 p-sm-5 p-5"
+                                                            className="text-center border border-light  p-xl-5 p-lg-5 p-lg-5 p-md-5 p-sm-5 py-3 py-sm-5  px-3 px-sm-5"
                                                             action="#!">
                                                             <p className='pb-3'>Внести зміни</p>
                                                             <div>{this.state.alertTab1}</div>
@@ -217,9 +218,10 @@ class Profile extends Component {
                                                             <input onChange={this.changeInputHandler} name="email" value={user.email} type="email" className="form-control mb-4" placeholder="Електронна пошта"/>
                                                             <input onChange={this.changeInputHandler} name="phone" value={user.phone} type="text" className="form-control mb-4" placeholder="Номер телефону" aria-describedby="defaultRegisterFormPhoneHelpBlock"/>
                                                             <input type="checkbox" className="custom-control-input"/>
-                                                                <input onChange={this.changePasswordInputHandler} name="old" value={this.state.passwordInputs.old} type="" className="form-control " placeholder="Старий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
-                                                                <input onChange={this.changePasswordInputHandler} name="new" value={this.state.passwordInputs.new} type="" className="form-control " placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
-                                                                <input onChange={this.changePasswordInputHandler} name="confirm" value={this.state.passwordInputs.confirm} type="" className="form-control " placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                                <button onClick={this.changePassword} className='bg-transparent border-0 m-2'>Зміна пароля</button>
+                                                                <input onChange={this.changePasswordInputHandler} name="old" value={this.state.passwordInputs.old} type="" className="form-control mb-4" placeholder="Старий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                                <input onChange={this.changePasswordInputHandler} name="new" value={this.state.passwordInputs.new} type="" className="form-control mb-4" placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
+                                                                <input onChange={this.changePasswordInputHandler} name="confirm" value={this.state.passwordInputs.confirm} type="" className="form-control mb-4" placeholder="Новий пароль" aria-describedby="defaultRegisterFormPasswordHelpBlock"/>
                                                             <div style={{color:'red'}}>{this.state.changePasswordError}</div>
                                                             <button onClick={this.changePassword} className='bg-transparent border-0 m-2'>Змінити пароль</button>
                                                             <small id="defaultRegisterFormPasswordHelpBlock"
@@ -241,28 +243,28 @@ class Profile extends Component {
                                             <form className='text-center border border-light p-5' action="#!">
                                                 <div>
                                                     <MDBRow
-                                                        className="form-input d-inline-flex flex-sm-wrap-reverse flex-wrap w-100 py-1 w-responsive">
-                                                        <MDBCol className='col-2 p-0'>
+                                                        className="form-input d-inline-flex flex-sm-wrap-reverse flex-wrap w-100 py-1 w-responsive tab-border">
+                                                        <MDBCol className='col-4 col-sm-2 p-0 order-1'>
                                                             <img
                                                                 src={require('./../../Image/categories/volosia/IMG_4.JPG')}
-                                                                className="img-fluid w-100" alt="Responsive image"/>
+                                                                className="img-fluid w-100 py-2" alt="Responsive image"/>
                                                         </MDBCol>
                                                         <MDBCol
-                                                            className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 py-2 font-smaller px-xl-3 px-lg-3 px-md-3 px-sm-2'>
+                                                            className=' order-2 col-7 col-sm-5 col-md-5 col-lg-5 col-xl-5 py-2 font-smaller px-xl-3 px-lg-3 px-md-3 px-sm-2'>
                                                             <p className='order-item w-100'>Назва товару(Для 2х строк).
                                                                 Інформація із баз данних, яка потрапляє у це віконце</p>
                                                         </MDBCol>
-                                                        <MDBCol className='col-2 px-0 py-3 mx-0 w-25'>
+                                                        <MDBCol className='order-4 col-4 col-sm-2 px-0 py-3 mx-0 w-25'>
                                                             <form>
                                                                 <input className='input-profile' type='number' min='1'
                                                                        value='1'></input>
                                                             </form>
                                                         </MDBCol>
-                                                        <MDBCol className='col-2 p-0 mx-0'>
+                                                        <MDBCol className='order-5 col-7 col-sm-2 p-0 mx-0'>
                                                             <p className='price px-lg-2 px-xl-2 px-md-2 px-sm-0 px-0 py-3'>1500<span>грн</span>
                                                             </p>
                                                         </MDBCol>
-                                                        <MDBCol className='col-1 p-1 py-2'>
+                                                        <MDBCol className='col-1 p-1 py-sm-2 py-0 order-3'>
                                                             <button type="button"
                                                                     className="btn btn-x px-xl-4 px-lg-4 px-md-4 px-sm-3 px-2  py-2 m-0 text-center bg-transparent border-0 z-depth-0">
                                                                 <i className="fas fa-times mr-2"></i>
@@ -272,13 +274,13 @@ class Profile extends Component {
                                                 </div>
                                                 <div className='d-inline-flex w-100'>
                                                     <div className='w-50 float-left'>
-                                                        <p className='payment align-content-center text-left font-weight-bold font-weight-bold py-2 my-4'>До
+                                                        <p className='payment align-content-center text-left font-weight-bold font-weight-bold py-0 my-2 px-0'>До
                                                             сплати: <span>1500</span> грн</p>
                                                     </div>
                                                     <div className='w-50 float-right m-0'>
                                                         <Link to='/Order'>
                                                             <button
-                                                                className="btn btn-profile btn-light-green w-100 my-4 m-0"
+                                                                className="btn btn-profile btn-light-green w-100 px-1 px-sm-4 my-4  m-0"
                                                                 type="submit">ПРИДБАТИ
                                                             </button>
                                                         </Link>
@@ -287,10 +289,10 @@ class Profile extends Component {
                                             </form>
                                         </p>
                                     </MDBTabPane>
-                                    <MDBTabPane tabId='3' className='p-2'>
+                                    <MDBTabPane tabId='3' className='p-2 m-3'>
                                         <p>
-                                            <MDBCol lg='3' md='3' xl='3' className='pb-5 p-2'>
-                                                <MDBCard className='border-0'>
+                                            <MDBCol lg='4' md='4' xl='3' sm='5'  className='  pb-5 p-2'>
+                                                <MDBCard className='border-0 '>
                                                     <MDBLink
                                                         className='text-white text-center align-items-center p-0'>
                                                         <MDBCardImage
@@ -308,7 +310,7 @@ class Profile extends Component {
                                                                 style={{marginBottom: '1rem'}}
                                                                 className='text-left p-0 pb-0 mb-2'
                                                             >
-                                                                <p className='prod-describe black-text m-0 '>На основі
+                                                                <p className='prod-describe black-text m-0'>На основі
                                                                     яєчного масла, гідролізату кератину, олії вербени.
                                                                     Для сухого та пошкодженого волосся.
                                                                 </p>

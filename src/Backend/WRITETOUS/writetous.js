@@ -148,7 +148,7 @@ class Contactform extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <MDBBtn onClick={this.formSubmit} rounded color="purple" className='mb-3 justify-content-center m-auto d-block'>
+                                        <MDBBtn onClick={this.formSubmit} rounded color="light-green" className='mb-3 justify-content-center m-auto d-block'>
                                              Надіслати
                                         </MDBBtn>
                                     </MDBCardBody>

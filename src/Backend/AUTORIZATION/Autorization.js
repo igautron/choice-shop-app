@@ -61,8 +61,8 @@ class Autorization extends React.Component  {
 
 	state = {
 		form: {
-			email: 'magic@mail.com',
-			password: 'password',
+			email: 'Введіть пошту',
+			password: 'Введіть пароль',
 			device_name: 'chrome'
 		},
 		alert: '',
@@ -97,7 +97,7 @@ class Autorization extends React.Component  {
 			<div>
 				<div className='z-index-5 autorization m-0 p-0'>
 					<div className='card justify-content-center m-0'>
-						<form className='text-center border border-light p-5' action="#!">
+						<form className='text-center border border-light py-5 px-3 px-sm-5' action="#!">
 							<p style={{color:'red'}}>
 								{this.state.alert}
 							</p>

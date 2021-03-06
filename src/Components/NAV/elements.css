@@ -51,32 +51,57 @@ input.input-search {
 
 
 .profile-menu {
-    display: block !important;
+    display: none !important;
     color: #fff;
     position: absolute !important;
     background: #5c8443;
     padding: 10px;
-
 }
+
+.login-button:hover .profile-menu {
+    display: block;
+}
+
+.nav-logo {
+    width: 80%!important;
+}
+
+
+
+
 
 
 @media (max-width: 576px) {
     .modal-dialog {
-        max-width: 470px !important;
+        max-width: 310px !important;
     }
 
     .modal-bin {
-        width: 470px !important;
+        width: 310px !important;
     }
 
     .btn-cart {
-        transform: translate(107px, -7px);
+        transform: translate(65px, -3px);
+        background: transparent !important;
+    }
+
+    .btn-aut {
+        transform: translate(40px, -3px);
         background: transparent !important;
     }
 
     .bin {
         width: 470px !important;
     }
+
+    i.fas, i.far {
+        font-size: 15px !important;
+    }
+
+    .cont-card {
+        height: 65px;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
@@ -95,6 +120,12 @@ input.input-search {
 
     .bin {
         width: 470px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .nav-logo {
+        width: 95%!important;
     }
 
 }

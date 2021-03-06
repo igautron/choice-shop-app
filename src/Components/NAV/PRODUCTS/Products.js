@@ -117,7 +117,7 @@ componentDidMount(props) {
         }else{
             url = 'http://choice-server.loc/api/products'
         }
-        fetch(url)
+        fetch('http://choice.loc/api/products')
             .then(response => response.json())
             .then(data => this.setState({products: data.products}));
     }

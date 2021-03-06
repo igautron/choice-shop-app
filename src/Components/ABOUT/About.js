@@ -8,7 +8,7 @@ class About extends React.Component  {
     render() {
         return (
             <section className="mb-5 mt-3 container">
-                <h2 className="h2-responsive font-weight-bold text-center pt-5 pb-3 about-text">
+                <h2 className="h2-responsive font-weight-bold text-center py-sm-5 py-3 about-text m-0">
                     ПРО КОМПАНІЮ
                 </h2>
                 <h5 className="black-text about-text pb-3 p-2 w-responsive w-100">
@@ -30,7 +30,7 @@ class About extends React.Component  {
                         />
                     </MDBCol>
                     <MDBCol lg="6" className="col text-center text-lg-left justify-content-center p-2">
-                                <h2 className="font-weight-bold py-3 mb-0 about-text">Наша місія</h2>
+                                <h2 className="h2-responsive font-weight-bold text-center py-sm-5 py-3 about-text m-0">Наша місія</h2>
                                 <h5 className="black-text about-text text-left">
                                     Продукція компанії <span className='green-ic font-weight-bold'>Choice</span> - це результат сумлінної праці на благо оздоровлення організму продукцією створеною на основі виключно натуральних та корисних компонентів, збереження здоров'я організму та дотримання високих стандартів. Наша місія повсякчас залишається незмінною: створювати найкращі харчові добавки до їжі, що досягається завдяки винаходу найкращого співвідношення натуральної сировини. Наш головний принцип заключається в тому, щоб уникнути використання хімікатів та фарбниців у продукції. Продукція вироблена на Україні. Залишимо красоту та молодість наодинці з природою Коли говоримо про Choice, ми творимо Здоров'я.
                                 </h5>

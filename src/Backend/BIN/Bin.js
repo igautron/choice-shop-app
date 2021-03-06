@@ -16,25 +16,25 @@ class Bin extends React.Component  {
         return (
             <div className='position-absolute z-index-5 bin m-0 p-0 mt-0'>
                     <div className='card m-0 p-0'>
-                        <form className='text-center border border-light p-5' action="#!">
+                        <form className='text-center border border-light py-5 px-3 px-sm-5' action="#!">
                             <div>
-                                <MDBRow className="form-input d-inline-flex flex-sm-wrap-reverse flex-wrap w-100 py-1 w-responsive">
-                                    <MDBCol className='col-2 p-0'>
+                                <MDBRow className="form-input d-inline-flex flex-sm-wrap-reverse flex-wrap w-100 py-1 w-responsive border-bottom">
+                                    <MDBCol className='col-4 col-sm-2 p-0 order-1'>
                                         <img src={require('./../../Image/categories/volosia/IMG_4.JPG')} className="img-fluid w-100" alt="Responsive image" />
                                     </MDBCol>
-                                    <MDBCol className='col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 py-2 font-smaller px-xl-3 px-lg-3 px-md-3 px-sm-2'>
+                                    <MDBCol className='order-2 col-7 col-sm-5 col-md-5 col-lg-5 col-xl-5 py-2 font-smaller px-xl-3 px-lg-3 px-md-3 px-sm-2'>
                                         <p className='order-item w-100'>Назва товару(Для 2х строк). Інформація із баз данних, яка потрапляє у це віконце</p>
                                     </MDBCol>
-                                    <MDBCol className='col-2 px-0 py-3 mx-0'>
+                                    <MDBCol className='order-4 col-4 col-sm-2 px-0 py-3 mx-0'>
                                         <form>
                                             <input className='input-bin' type='number' min='1' value='1'></input>
                                         </form>
                                     </MDBCol>
-                                    <MDBCol className='col-2 p-0 mx-0'>
+                                    <MDBCol className='order-5 col-7 col-sm-2 p-0 mx-0'>
                                         <p className='price px-lg-2 px-xl-2 px-md-2 px-sm-0 px-0 py-3'>1500<span>грн</span></p>
                                     </MDBCol>
-                                    <MDBCol className='col-1 p-1 py-2'>
-                                        <button type="button" className="btn btn-x px-xl-4 px-lg-4 px-md-4 px-sm-3 px-2  py-2 m-0 text-center bg-transparent border-0 z-depth-0">
+                                    <MDBCol className='order-3 col-1 col-sm-1 p-1 py-0 py-sm-2'>
+                                        <button type="button" className="btn btn-x px-xl-4 px-lg-4 px-md-4 px-sm-3 px-2  py-0 py-sm-2 m-0 text-center bg-transparent border-0 z-depth-0">
                                             <i className="fas fa-times mr-2"></i>
                                         </button>
                                     </MDBCol>

@@ -17,7 +17,7 @@ class Production extends React.Component {
                         />
                     </MDBCol>
                     <MDBCol lg="6" className="col text-center text-lg-left justify-content-center p-2">
-                        <h2 className="font-weight-bold py-3 mb-0 about-text">Продукція компанії</h2>
+                        <h2 className="h2-responsive font-weight-bold text-center py-sm-5 py-3 about-text m-0">Продукція компанії</h2>
                         <h5 className="black-text about-text text-left">
                             <span className='green-ic font-weight-bold'>White Mandarin</span> - торгівельна марка натуральних косметичних засобів, вироблених виключно на основі рослинної сировини, не містять продуктів нафтохімії, SLS і SLES, силіконів, парабенів, синтетичних добавок, небезпечних для здоров'я людини.
                         </h5>

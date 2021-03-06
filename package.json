@@ -21,7 +21,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "sass": "^1.26.11",
-    "simple-react-lightbox": "^3.3.4-1"
+    "simple-react-lightbox": "^3.3.4-1",
+    "z-index": "0.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

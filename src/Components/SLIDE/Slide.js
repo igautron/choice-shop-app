@@ -1,6 +1,7 @@
 import React from 'react';
 import {Component} from 'react';
 import './Slide.scss'
+import './slide.css'
 import {Link, BrowserRouter as Router } from 'react-router-dom';
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
         "mdbreact";
@@ -14,7 +15,7 @@ class Slide extends React.Component  {
                     length={6}
                     showControls={true}
                     showIndicators={true}
-                    className="z-depth-3 w-100 slider"
+                    className="z-depth-3 w-100 slider d-none d-sm-block"
                 >
                     <MDBCarouselInner>
                         <MDBCarouselItem itemId="1">
@@ -103,6 +104,13 @@ class Slide extends React.Component  {
                         </MDBCarouselItem>
                     </MDBCarouselInner>
                 </MDBCarousel>
+                <div className='d-block d-sm-none slide-img'>
+                            <img
+                                className="h-100 w-100"
+                                src={require('../../Image/slider/PANO2.jpg')}
+                                alt="Third slide"
+                            />
+                </div>
         </div>
         )
     }

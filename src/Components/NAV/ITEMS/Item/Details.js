@@ -70,7 +70,7 @@ class Details extends React.Component {
         fetch('http://choice-server.loc/products/'+itemId)
             .then(response => response.json())
             .then(product => {
-              this.setState({product: product.data})
+              this.setState({product: data.product.data})
               this.get_appo(product.data)
             })
 

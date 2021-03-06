@@ -1,0 +1,8 @@
+
+.slide-img img {
+    position: relative !important;
+}
+
+.slide-info-block {
+   position: absolute !important;
+}

@@ -107,10 +107,10 @@ class Nav extends React.Component  {
     render() {
         return (
               <div className='container h-100'>
-                  <MDBRow className='z-index-0 w-100 m-0'>
-                      <MDBCol className='float-left col-xl-4 col-lg-4 col-md-4 col-sm-5 col-6 pl-0'>
+                  <MDBRow className='z-index-0 cont-card w-100 m-0'>
+                      <MDBCol className='float-left cont-card col-xl-4 col-lg-4 col-md-4 col-sm-5 col-6 pl-0 pr-0'>
                           <div className='px-2'>
-                              <MDBCardImage src={require('./../../Image/logo/logo.png')} className="img-fluid nav-logo py-4 my-2 z-index-2" alt="Responsive image" />
+                              <img src={require('./../../Image/logo/logo.png')} className="h-auto img-fluid nav-logo py-sm-4 py-2 my-2 z-index-2" alt="Responsive image" />
                           </div>
                       </MDBCol>
                       <MDBCol className='d-inline-flex col-xl-4 col-lg-4 col-md-4 col-sm-3 col-1 d-lg-flex justify-content-between my-5 px-0'>
@@ -132,9 +132,9 @@ class Nav extends React.Component  {
                               </div>
                           </div>
                       </MDBCol>
-                      <MDBCol className='float-right  text-right p-0 col-xl-4 col-lg-4 col-xl-4 col-md-4 col-sm-4 col-5  px-0 pr-0 ml-xl-0 pl-lg-0 ml-md-0 ml-sm-0'>
-                          <div className='m-auto d-inline-flex align-items-center pt-4'>
-                              <button className='text-right p-3 py-4 brown-ic border-0 bg-transparent' onClick={this.searchHandleToggle}><i className="fas fa-search"></i></button>
+                      <MDBCol className='float-right cont-card text-right p-0 col-xl-4 col-lg-4 col-xl-4 col-md-4 col-sm-4 col-5  px-0 pr-0 ml-xl-0 pl-lg-0 ml-md-0 ml-sm-0'>
+                          <div className='m-auto d-inline-flex align-items-center pt-3 pt-sm-4 pr-2 pr-sm-0'>
+                              <button className='text-right p-2 p-sm-3 py-2 py-sm-3 py-md-4  brown-ic border-0 bg-transparent' onClick={this.searchHandleToggle}><i className="fas fa-search"></i></button>
                               <MDBModal className='z-depth-0 pt-3 w-100 p-0 modal-search' isOpen={this.state.isSearchModalOpened} toggle={this.searchHandleToggle} >
                                   <MDBModalBody className='h-100 modal-body z-depth-0'>
                                       <form className="form-inline d-inline-flex w-100 py-5 form-search">
@@ -144,7 +144,7 @@ class Nav extends React.Component  {
                                       </form>
                                   </MDBModalBody>
                               </MDBModal>
-                              <button className='text-right p-3 py-4 brown-ic border-0 bg-transparent login-button ' onClick={this.loginModalToggle}>
+                              <button className='text-right p-2 p-sm-3 py-2 py-sm-3 py-md-4 brown-ic border-0 bg-transparent login-button ' onClick={this.loginModalToggle}>
                                  <i className="far fa-user"></i>
                               </button>
                               <MDBModal className='z-depth-0 modal-login pt-3' isOpen={this.state.isLoginModalOpened} toggle={this.loginModalToggle} >
@@ -156,7 +156,7 @@ class Nav extends React.Component  {
                                   </MDBModalBody>
                               </MDBModal>
                               {this.profileMenu()}
-                              <button className='text-right p-3 py-4 brown-ic border-0 bg-transparent cart-button' onClick={this.cartModalToggle}>
+                              <button className='text-right p-2 p-sm-3 py-2 py-sm-3 py-md-4  brown-ic border-0 bg-transparent cart-button' onClick={this.cartModalToggle}>
                                   <i className="fas fa-shopping-cart"></i>
                               </button>
                                   <MDBModal className='modal-bin justify-content-center mx-auto' isOpen={this.state.isCartModalOpened} toggle={this.cartModalToggle} >
